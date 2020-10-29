@@ -1,0 +1,15 @@
+						-- distinct ve group by fonksiyonları
+		-- distinct ile bir sutunda bulunan tekrar eden ifadeleri 1 e dusurerek bir tabloda görebiliriz ANCAK!!!
+        -- distinct ile arka planda tekrar edenlerin bir listesi bulunmayacaktır ve bununla birlikte ortalama toplama vb. 
+        -- işlemler yapılamayacaktır bu işlemler group by ile yapılabilir.
+-- select distinct Category from shopapp.product
+
+-- select Category from shopapp.product group by Category
+		-- count() ile group by ile arka planda tutulan listelerin sayısını öğrenebilirriz.
+-- select Category, count(*) as adet from shopapp.product group by Category
+		-- sınıflandırılan catefory listelerinin toplam ve ortalama fiyatlarını görebiliriz
+-- select Category, Sum(Price) AS Toplam_fiyat from shopapp.product group by Category
+-- select Category, avg(Price) as Ortalama from shopapp.product group by Category 
+		-- where komutu ilede ortalamasını yada yapılacak işlemlerin listelere 
+        -- -filtre uygulayarak yapılabilir. fiyatı 3000 üstü için ortamalası alınmıştır.
+-- select Category, avg(Price) as Ortalama from shopapp.product where Price>3000 group by Category

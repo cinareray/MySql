@@ -1,2 +1,2 @@
 # MySql
-MySql Workbench kullanılarka Sql sorgu kodları bulunmaktadır.
+MySql Workbench kullanılarak Sql sorgu kodları bulunmaktadır.
